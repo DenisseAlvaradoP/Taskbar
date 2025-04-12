@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Task Bar</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="desktop">
+    <div class="todo-app hidden" id="todoApp">
+      <h2>🎮 Task Quest</h2>
+      <input type="text" id="taskInput" placeholder="Enter a new task..." />
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <div class="taskbar">
+      <div class="start-button" id="startBtn">🎮 Start</div>
+      <div class="time" id="time">00:00</div>
+    </div>
+
+    <div class="start-menu hidden" id="startMenu">
+      <ul>
+        <li onclick="toggleTodoApp()">📝 Task List</li>
+        <li>🎵 Music</li>
+        <li>⚙️ Settings</li>
+        <li>🚪 Logout</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
