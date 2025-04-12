@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  overflow: hidden;
+}
+
+.desktop {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  height: 50px;
+  padding: 0 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.start-button {
+  background-color: #ff006e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.start-button:hover {
+  background-color: #d4005c;
+}
+
+.time {
+  font-size: 14px;
+}
+
+.start-menu {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  width: 200px;
+  background-color: #222;
+  border: 2px solid #ff006e;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px black;
+  z-index: 100;
+}
+
+.start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.start-menu li {
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.start-menu li:hover {
+  background-color: #444;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Todo App */
+
+.todo-app {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background: #1e1e2f;
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  z-index: 200;
+}
+
+.todo-app h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #0ff;
+  text-align: center;
+}
+
+.todo-app input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.todo-app button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.todo-app ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.todo-app li {
+  background: #333;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.todo-app li:hover {
+  background: #444;
+}
+
+.todo-app li::after {
+  content: "🗑️";
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
